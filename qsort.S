@@ -75,8 +75,8 @@ main_leave:
 qsort:
             sub     sp, sp, 48
             cmp     x1, x2
-            b.ge    qsort_leave
             str     x30, [sp, 40]
+            b.ge    qsort_leave
             str     x19, [sp, 32]
             str     x20, [sp, 24]
             str     x21, [sp, 16]
