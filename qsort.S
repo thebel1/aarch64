@@ -61,11 +61,12 @@ main_printLoop:
             b.lt    main_printLoop
             ldr     x0, =newline
             bl      printf
-main_leave:
+            
             ldr     x22, [sp, 8]
             ldr     x21, [sp, 16]
             ldr     x20, [sp, 24]
             ldr     x19, [sp, 32]
+main_leave:
             ldr     x30, [sp, 40]
             add     sp, sp, 48
             ret
@@ -98,8 +99,8 @@ qsort:
             ldr     x21, [sp, 16]
             ldr     x20, [sp, 24]
             ldr     x19, [sp, 32]
-            ldr     x30, [sp, 40]
 qsort_leave:
+            ldr     x30, [sp, 40]
             add     sp, sp, 48
             ret
 
