@@ -61,7 +61,8 @@ main_printLoop:
             b.lt    main_printLoop
             ldr     x0, =newline
             bl      printf
-            
+            mov     x0, x22
+            bl      free
             ldr     x22, [sp, 8]
             ldr     x21, [sp, 16]
             ldr     x20, [sp, 24]
